@@ -82,7 +82,7 @@ int main(){
     scanf("%d", &npt2);
 
     //IMPRESSAO DOS DADOS
-    printf("\nAqui estão os dados digitados das cartas: ");
+    printf("\nAqui estão os dados digitados das cartas: \n");
 
     //CALCULO DA DENSIDADE
     densidade1 = populacao / area;
@@ -112,8 +112,8 @@ int main(){
     printf("População: %d\n", populacao2);
     printf("Área da cidade: %.2f km²\n", area2);
     printf("PIB: R$%.2f \n", pib2);
-    printf("Número de Pontos Turísticos: %d", npt2);
-    printf("Densidade Popuacional: %.2fhab/km²\n", densidade2);
+    printf("Número de Pontos Turísticos: %d\n", npt2);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade2);
     printf("PIB per Capita: %.2f reais\n", ppc2);
     
 
