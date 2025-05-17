@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
+#include <time.h>
 
 int main(){
 
@@ -137,18 +139,19 @@ int main(){
 
     //COMPARAÇÃO CONDICIONAL DOS DADOS APRESENTADOS
     printf("\n-----COMPARAÇÕES CONDICIONAIS-----\n");
-
+    
     printf("\nPopulação de %s de %lu - População de %s de %lu\n", cidadenome, populacao,
     cidadenome2, populacao2);
     if(populacao > populacao2){
+
         printf("Carta 1 é a vencedora!\n");
     } else {
         printf("Carta 2 é a vencedora!\n");
     }
 
     printf("\nÁrea de %s de %.2f km² - Área de %s de %.2f km²\n", cidadenome, area, cidadenome2, area2);
-    if(area > area2){
         printf("Carta 1 é a vencedora!\n");
+    if(area > area2){
     } else {
         printf("Carta 2 é a vencedora!\n");
     }
@@ -182,6 +185,92 @@ int main(){
         printf("Carta 1 é a vencedora!\n");
     } else {
         printf("Carta 2 é a vencedora!\n");
+    }
+
+    //DESAFIO AVENTUREIRO LVL 2, COMPARAÇÃO E MENU INTERATIVO
+    int atributoJogador;
+    
+    printf("\n-----MENU INTERATIVO-----\n");
+    printf("\nEscolha abaixo um dos atributos para poder efetuar a comparação:\n");
+    printf("1. Nome do país\n");
+    printf("2. População\n");
+    printf("3. Área\n");
+    printf("4. PIB\n");
+    printf("5. Número de pontos turísticos\n");
+    printf("6. Densidde demográfica\n");
+    printf("Escolha seu atributo: ");
+    scanf("%d", &atributoJogador);
+
+    switch (atributoJogador)
+    {
+    case 1: 
+        printf("\nAtributo: Nome da Cidade.\n");
+        printf("Carta 1: %s - Carta 2: %s \n", cidadenome, cidadenome2);
+        printf("Atributo somente informativo.\n");
+        break;
+
+    case 2: 
+        printf("\nAtributo: População\n");
+        printf("%s: %lu - %s: %lu \n", cidadenome, populacao, cidadenome2, populacao2);
+        if (populacao > populacao2){
+            printf("Carta 1 venceu!\n");
+        } else if (populacao2 > populacao){
+            printf("Carta 2 venceu!\n");
+        } else {
+            printf("Empatou!\n");
+        }
+        break;
+
+        case 3: 
+        printf("\nAtributo: Área\n");
+        printf("%s: %.2f - %s: %.2f \n", cidadenome, area, cidadenome2, area2);
+        if (area > area2){
+            printf("Carta 1 venceu!\n");
+        } else if (area2 > area){
+            printf("Carta 2 venceu!\n");
+        } else {
+            printf("Empatou!\n");
+        }
+        break;
+
+        case 4: 
+        printf("\nAtributo: PIB\n");
+        printf("%s: %.2lf - %s: %.2lf \n", cidadenome, pib, cidadenome2, pib2);
+        if (pib > pib2){
+            printf("Carta 1 venceu!\n");
+        } else if (pib2 > pib){
+            printf("Carta 2 venceu!\n");
+        } else {
+            printf("Empatou!\n");
+        }
+        break;
+
+        case 5:
+
+        printf("\nAtributo: Número de Pontos Turísticos\n");
+        printf("%s: %d - %s: %d \n", cidadenome, npt, cidadenome2, npt2);
+        if (npt > npt2){
+            printf("Carta 1 venceu!\n");
+        } else if (npt2 > npt){
+            printf("Carta 2 venceu!\n");
+        } else {
+            printf("Empatou!\n");
+        }
+        break;
+
+        case 6: 
+        printf("\nAtributo: Densidade Demográfica\n");
+        printf("%s: %.2f - %s: %.2f \n", cidadenome, densidade1, cidadenome2, densidade2);
+        if (densidade1 < densidade2){
+            printf("Carta 1 venceu!\n");
+        } else if (densidade2 < densidade1){
+            printf("Carta 2 venceu!\n");
+        } else {
+            printf("Empatou!\n");
+        }
+        break;
+    default:
+        printf("\nOpção Inválida\n");
     }
 
     
