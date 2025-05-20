@@ -150,8 +150,8 @@ int main(){
     }
 
     printf("\nÁrea de %s de %.2f km² - Área de %s de %.2f km²\n", cidadenome, area, cidadenome2, area2);
-        printf("Carta 1 é a vencedora!\n");
     if(area > area2){
+        printf("Carta 1 é a vencedora!\n");
     } else {
         printf("Carta 2 é a vencedora!\n");
     }
@@ -273,6 +273,116 @@ int main(){
         printf("\nOpção Inválida\n");
     }
 
+    //DESAFIO NIVEL MESTRE
+
+    int resultado1, resultado2, atributo1, atributo2;
+
+    printf("\nAgora, iremos comparar dois atributos ao mesmo tempo!\n");
+    
+    printf("\n1. População\n");
+    printf("2. Área\n");
+    printf("3. PIB\n");
+    printf("4. Número de Pontos Turísticos\n");
+    printf("5. Densidade Demográfica\n");
+    printf("6. PIB Per Capita\n");
+    printf("Escolha o primeiro atributo que deseja comparar entra as duas cartas: \n");
+    scanf("%d", &atributo1);
+
+    printf("\n1. População\n");
+    printf("2. Área\n");
+    printf("3. PIB\n");
+    printf("4. Número de Pontos Turísticos\n");
+    printf("5. Densidade Demográfica\n");
+    printf("6. PIB Per Capita\n");
+    printf("Escolha o segundo atributo que deseja comparar entre as duas cartas: \n");
+    scanf("%d", &atributo2);
+
+    if (atributo1 == atributo2){
+        printf("Erro! É necessário dois atributos diferentes! Reinicie o programa.\n");
+    } else {
+        switch (atributo1)
+        {
+        case 1:
+            printf("O atributo escolhido foi 'População'!\n");
+            resultado1 = populacao > populacao2 ? 1 : 0;
+        break;
+        
+        case 2:
+            printf("O atributo escolhido foi 'Área'!\n");
+            resultado1 = area > area2 ? 1 : 0;
+        break;
+        
+        case 3: 
+            printf("O atributo escolhido foi 'PIB'!\n");
+            resultado1 = pib > pib2 ? 1 : 0;
+        break;
+            
+        case 4: 
+            printf("O atributo escolhido foi 'Nº de Pontos Turísticos'!\n");
+            resultado1 = npt > npt2 ? 1 : 0;
+        break;
+        
+        case 5:
+            printf("O atributo escolhido foi 'Densidade Demográfica'!\n");
+            resultado1 = densidade1 < densidade2 ? 1 : 0;
+        break;
+        
+        case 6:
+            printf("O atributo escolhido foi 'PIB Per Capita'!\n");
+            resultado1 = ppc1 > ppc2 ? 1 : 0;
+        break;
+
+        default:
+            printf("Opção Inválida!\n");
+        break;    
+        }
+
+        switch (atributo2){
+        case 1:
+            printf("O atributo escolhido foi 'População'!\n");
+            resultado2 = populacao > populacao2 ? 1 : 0;
+        break;
+        
+        case 2:
+            printf("O atributo escolhido foi 'Área'!\n");
+            resultado2 = area > area2 ? 1 : 0;
+        break;
+        
+        case 3: 
+            printf("O atributo escolhido foi 'PIB'!\n");
+            resultado2 = pib > pib2 ? 1 : 0;
+        break;
+            
+        case 4: 
+            printf("O atributo escolhido foi 'Nº de Pontos Turísticos'!\n");
+            resultado2 = npt > npt2 ? 1 : 0;
+        break;
+        
+        case 5:
+            printf("O atributo escolhido foi 'Densidade Demográfica'!\n");
+            resultado2 = densidade1 < densidade2 ? 1 : 0;
+        break;
+        
+        case 6:
+            printf("O atributo escolhido foi'!\n");
+            resultado2 = ppc1 > ppc2 ? 1 : 0;
+        break;
+
+        default:
+            printf("Opção Inválida!\n");
+        break;    
+        }        
+
+    }
+    
+    if (resultado1 && resultado2 == 1){
+        printf("Você venceu!\n");
+    } else if (resultado1 || resultado2 ==1){
+        printf("Empate!\n");
+    } else {
+        printf("Você perdeu!\n");
+    }
+    
     
     return 0; 
 
